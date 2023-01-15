@@ -8,6 +8,7 @@ export default function App() {
         passwordConfirm: "",
         joinedNewsletter: true
     })
+
     
    
     function handleChange(event) {
@@ -21,15 +22,16 @@ export default function App() {
     function handleSubmit(event) {
         event.preventDefault()
         if(formData.password === formData.passwordConfirm) {
-            console.log("Successfully signed up")
+            alert("Successfully signed up")
         } else {
-            console.log("Passwords do not match")
+            alert("Passwords do not match")
             return
         }
         
         if(formData.joinedNewsletter) {
-            console.log("Thanks for signing up for our newsletter!")
+            alert("Thanks for signing up for our newsletter!")
         }
+
     }
     
     return (
